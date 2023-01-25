@@ -1,38 +1,222 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*  NAVBAR */
+.navbar{
+  height: 9vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.logo h1{
+  font-size: 30px;
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.hamburger {
+  display: none;
+  padding: 1rem;
+}
+
+
+
+.viewbook {
+  outline: none;
+  border: 1px solid white;
+  background-color: transparent;
+  padding: 10px 20px 5px 20px;
   color: white;
+  font-size: 20px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+.Home-Page{
+  width: 100%;
+  min-height: 91.5vh;
+  max-height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.homeimg{
+  width: 28.5rem;
+}
+
+.books_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards{
+  background-color: white;
+  width: 200px;
+  height: 400px;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  flex-wrap: wrap;
+}
+
+.cards img {
+  margin-top: 5px;
+  width: 180px;
+  height: 200px;
+}
+
+.heads{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 95%;
+  margin-top: 5px;
+}
+
+.heads h6{
+  font-size: 17px;
+}
+
+.heads .desc{
+  width: 95%;
+  overflow: hidden;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 1rem;
+}
+
+.buttons span {
+  cursor: pointer;
+}
+
+.loading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.addbooks{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formfield {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  flex-direction: column;
+}
+.formfield h2 {
+  color: white;
+  font-weight: bold;
+  font-size: 25px;
+}
+.formfield input {
+  width: 350px;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid white;
+  color: white;
+  padding: 5px;
+  margin: 1rem;
+  text-align: center;
+}
+.formfield button {
+  margin-top: 2rem;
+  padding: 8px 20px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+
+@media screen and (max-width: 940px) {
+  .cards {
+    margin: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 940px) {
+  .navbar {
+    height: 9vh;
   }
+  .navbar .hamburger {
+      display: block;
+      z-index: 15;
+      margin-bottom: 2rem;
+  }
+
+  .navbar .nav-menu {
+      position: absolute;
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      left:-100%;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, .8);
+      transition: 0.5s ease-in;
+  }
+
+  .logo h1 {
+    font-size: 20px;
+  }
+
+  .navbar .active {
+      left: 0;
+  }
+
+  .navbar li {
+      margin-right: 1rem;
+      font-size: 2rem;
+  }
+  .link {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+  }
+
+  .navbar button {
+      font-size: 1.8rem;
+  }
+
+
 }
