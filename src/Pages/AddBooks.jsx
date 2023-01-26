@@ -21,7 +21,7 @@ const AddBooks = () => {
   const submit = async (e) => {
     e.preventDefault();
     await axios
-          .post("http://localhost:4000/api/books", data)
+          .post("https://book-store-server-1736.onrender.com/api/books", data)
           .then((res) => console.log(res));
       setData({
         title: "",

@@ -6,7 +6,7 @@ const BookSection = ({ data }) => {
   // Functions
   const deleteBook = async (id) => {
     // your delete logic here
-    const response = await fetch(`http://localhost:4000/api/books/${id}`, {
+    const response = await fetch(`https://book-store-server-1736.onrender.com/api/books/${id}`, {
       method: 'DELETE',
     });
     const json = await response.json();
